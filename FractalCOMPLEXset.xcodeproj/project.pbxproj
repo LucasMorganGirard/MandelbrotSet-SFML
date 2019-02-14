@@ -13,6 +13,7 @@
 		E10E84532215BB2600CE955D /* nice_music.ogg in Resources */ = {isa = PBXBuildFile; fileRef = E10E84522215BB2600CE955D /* nice_music.ogg */; };
 		E10E84552215BB2600CE955D /* sansation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E10E84542215BB2600CE955D /* sansation.ttf */; };
 		E10E84572215BB2600CE955D /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E10E84562215BB2600CE955D /* icon.png */; };
+		E10E845F2215BBE600CE955D /* MandSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E10E845D2215BBE600CE955D /* MandSet.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,8 @@
 		E10E84522215BB2600CE955D /* nice_music.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = nice_music.ogg; sourceTree = "<group>"; };
 		E10E84542215BB2600CE955D /* sansation.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sansation.ttf; sourceTree = "<group>"; };
 		E10E84562215BB2600CE955D /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		E10E845D2215BBE600CE955D /* MandSet.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MandSet.cpp; sourceTree = "<group>"; };
+		E10E845E2215BBE600CE955D /* MandSet.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MandSet.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +63,8 @@
 				E10E844A2215BB2600CE955D /* ResourcePath.mm */,
 				E10E844C2215BB2600CE955D /* ResourcePath.hpp */,
 				E10E844D2215BB2600CE955D /* main.cpp */,
+				E10E845D2215BBE600CE955D /* MandSet.cpp */,
+				E10E845E2215BBE600CE955D /* MandSet.hpp */,
 				E10E844F2215BB2600CE955D /* Resources */,
 				E10E84482215BB2600CE955D /* Supporting Files */,
 			);
@@ -177,6 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E10E844E2215BB2600CE955D /* main.cpp in Sources */,
+				E10E845F2215BBE600CE955D /* MandSet.cpp in Sources */,
 				E10E844B2215BB2600CE955D /* ResourcePath.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,6 +283,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7QKA9L7X44;
+				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = "FractalCOMPLEXset/FractalCOMPLEXset-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -288,6 +295,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7QKA9L7X44;
+				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = "FractalCOMPLEXset/FractalCOMPLEXset-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
