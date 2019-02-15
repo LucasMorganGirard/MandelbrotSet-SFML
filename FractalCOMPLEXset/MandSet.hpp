@@ -19,13 +19,18 @@ public:
     
 private:
     void calculateNextStep();
+    double map(const double&, const double&, const double&, const double&, const double&) const;
     
+    //members variables
     const unsigned short mLongueur;
     const unsigned short mHauteur;
     sf::RenderWindow& mWin;
     sf::Texture mTexture;
     sf::Sprite mSprite;
     sf::Uint8* mPixels;
+    
+    //mandelbrot calculs
+    
 };
 
 #endif

@@ -6,9 +6,9 @@
 
 int main(int, char const**)
 {
-    sf::RenderWindow window(sf::VideoMode(800, 800), "Benoit Mandelbrot Set", sf::Style::None);
+    sf::RenderWindow window(sf::VideoMode(1600, 1600), "Benoit Mandelbrot Set", sf::Style::None);
     
-    mandelbrot fractal(window, 400, 400);
+    mandelbrot fractal(window, 1600, 1600);
     
     while (window.isOpen())
     {
@@ -21,6 +21,10 @@ int main(int, char const**)
 
             if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape) {
                 window.close();
+            }
+            
+            if(event.type == sf::Event::MouseButtonPressed){
+                
             }
         }
         window.clear();
