@@ -8,7 +8,9 @@ int main(int, char const**)
 {
     sf::RenderWindow window(sf::VideoMode(1600, 1600), "Benoit Mandelbrot Set", sf::Style::None);
     
-    mandelbrot fractal(window, 1600, 1600);
+    mandelbrot fractal(window);
+    
+    sf::Vector2i click = {0,0};
     
     while (window.isOpen())
     {
@@ -23,11 +25,21 @@ int main(int, char const**)
                 window.close();
             }
             
+            if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::R) {
+                fractal.reset();
+            }
+            
+            
+            if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Up) {
+                fractal.colorSwitch();
+            }
+            
             if(event.type == sf::Event::MouseButtonPressed){
-                
+                click = sf::Mouse::getPosition(window);
+                fractal.recentrer(click.x, click.y);
             }
         }
-        window.clear();
+        
         fractal.drawSet();
         window.display();
     }

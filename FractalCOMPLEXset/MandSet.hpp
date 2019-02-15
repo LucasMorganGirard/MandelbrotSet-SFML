@@ -14,10 +14,14 @@
 
 class mandelbrot{
 public:
-    mandelbrot(sf::RenderWindow&, const unsigned short&, const unsigned short&);
+    mandelbrot(sf::RenderWindow&);
     void drawSet();
+    void recentrer(const int&, const int&);
+    void reset();
+    void colorSwitch();
     
 private:
+    void zoom();
     void calculateNextStep();
     double map(const double&, const double&, const double&, const double&, const double&) const;
     
@@ -28,6 +32,11 @@ private:
     sf::Texture mTexture;
     sf::Sprite mSprite;
     sf::Uint8* mPixels;
+    double mIntervGaucheX;
+    double mIntervDroiteX;
+    double mIntervHautY;
+    double mIntervBasY;
+    unsigned short mColorOption;
     
     //mandelbrot calculs
     
