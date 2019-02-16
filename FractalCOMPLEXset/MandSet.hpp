@@ -19,6 +19,7 @@ public:
     void recentrer(const int&, const int&);
     void reset();
     void colorSwitch();
+    void saveImage() const;
     
 private:
     void zoom();

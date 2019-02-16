@@ -29,9 +29,12 @@ int main(int, char const**)
                 fractal.reset();
             }
             
-            
             if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Up) {
                 fractal.colorSwitch();
+            }
+            
+            if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::S) {
+                fractal.saveImage();
             }
             
             if(event.type == sf::Event::MouseButtonPressed){

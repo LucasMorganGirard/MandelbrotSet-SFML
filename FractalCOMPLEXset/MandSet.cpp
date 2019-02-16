@@ -9,11 +9,12 @@
 #include "MandSet.hpp"
 #include <iostream>
 #include <math.h>
+#include <fstream>
 
 mandelbrot::mandelbrot(sf::RenderWindow& win)
 : mLongueur(win.getSize().x), mHauteur(win.getSize().y), mWin(win), mIntervGaucheX(-1.8), mIntervDroiteX(0.5),mIntervHautY(-1.2), mIntervBasY(1.2), mColorOption(0)
 {
-    mWin.setFramerateLimit(30);
+    mWin.setFramerateLimit(1);
     mPixels = new sf::Uint8[mLongueur*mHauteur*4];  //Creation de l'array de pixels
     mTexture.create(mLongueur, mHauteur);           //On cree l'objet qui vas stoquer les pixels
     calculateNextStep();
@@ -175,10 +176,25 @@ void mandelbrot::reset(){
 };
 
 void mandelbrot::colorSwitch(){
-    if(mColorOption<9){
+    if(mColorOption < 9){
         mColorOption++;
     }else{
         mColorOption = 0;
     }
     calculateNextStep();
+};
+
+void mandelbrot::saveImage() const{
+    std::ofstream screenShot("screenShot.ppm");
+    screenShot << "P3" << std::endl;
+    screenShot << mLongueur << " " << mHauteur << std::endl;
+    screenShot << "255" << std::endl;
+    sf::Uint8 r,g,b;
+    for(unsigned i = 0; i < mLongueur * mHauteur * 4; i+=4){
+        r = mPixels[i];
+        g = mPixels[i+1];
+        b = mPixels[i+2];
+        screenShot << std::to_string(r) << " " << std::to_string(g) << " " << std::to_string(b) << std::endl;
+    }
+    system("open screenShot.ppm");
 };
