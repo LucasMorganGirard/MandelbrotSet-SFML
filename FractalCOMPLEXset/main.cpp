@@ -29,6 +29,14 @@ int main(int, char const**)
                 fractal.reset();
             }
             
+            if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::P) {
+                fractal.increasePrecison();
+            }
+            
+            if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::I) {
+                fractal.seeInfo();
+            }
+            
             if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Up) {
                 fractal.colorSwitch();
             }

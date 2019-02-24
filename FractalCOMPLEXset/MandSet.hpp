@@ -20,11 +20,15 @@ public:
     void reset();
     void colorSwitch();
     void saveImage() const;
+    void increasePrecison();
+    void goTo(const double&, const double&, const double&, const double&);
+    void seeInfo();
     
 private:
     void zoom();
     void calculateNextStep();
-    double map(const double&, const double&, const double&, const double&, const double&) const;
+    void subClaculateNextStep(const unsigned&);
+    const double map(const double&, const double&, const double&, const double&, const double&) const;
     
     //members variables
     const unsigned short mLongueur;
@@ -38,8 +42,10 @@ private:
     double mIntervHautY;
     double mIntervBasY;
     unsigned short mColorOption;
-    
-    //mandelbrot calculs
+    unsigned mPrecision;
+    bool mAffichierInfo;
+    sf::Font mFont;
+    sf::Text mInfo;
     
 };
 

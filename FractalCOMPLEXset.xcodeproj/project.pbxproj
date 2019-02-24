@@ -10,6 +10,7 @@
 		E10E844B2215BB2600CE955D /* ResourcePath.mm in Sources */ = {isa = PBXBuildFile; fileRef = E10E844A2215BB2600CE955D /* ResourcePath.mm */; };
 		E10E844E2215BB2600CE955D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E10E844D2215BB2600CE955D /* main.cpp */; };
 		E10E845F2215BBE600CE955D /* MandSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E10E845D2215BBE600CE955D /* MandSet.cpp */; };
+		E162FE552218371A000FE549 /* sansation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E162FE5422183714000FE549 /* sansation.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		E10E844D2215BB2600CE955D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		E10E845D2215BBE600CE955D /* MandSet.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MandSet.cpp; sourceTree = "<group>"; };
 		E10E845E2215BBE600CE955D /* MandSet.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MandSet.hpp; sourceTree = "<group>"; };
+		E162FE5422183714000FE549 /* sansation.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sansation.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 		E10E844F2215BB2600CE955D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E162FE5422183714000FE549 /* sansation.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -135,6 +138,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E162FE552218371A000FE549 /* sansation.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,7 +271,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7QKA9L7X44;
-				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_OPTIMIZATION_LEVEL = fast;
 				INFOPLIST_FILE = "FractalCOMPLEXset/FractalCOMPLEXset-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -279,7 +283,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7QKA9L7X44;
-				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_OPTIMIZATION_LEVEL = fast;
 				INFOPLIST_FILE = "FractalCOMPLEXset/FractalCOMPLEXset-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
