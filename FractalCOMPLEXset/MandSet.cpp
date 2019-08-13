@@ -3,7 +3,6 @@
 //  FractalCOMPLEXset
 //
 //  Created by GIRARD Lucas on 14/02/2019.
-//  Copyright © 2019 GIRARD Lucas. All rights reserved.
 //
 
 #include "MandSet.hpp"
